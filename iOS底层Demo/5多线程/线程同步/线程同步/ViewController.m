@@ -15,6 +15,10 @@
 #import "MutexDemo3.h"
 #import "NSLockDemo.h"
 #import "NSConditionDemo.h"
+#import "NSConditionLockDemo.h"
+#import "SerialQueueDemo.h"
+#import "SemaphoreDemo.h"
+#import "SynchronizedDemo.h"
 
 @interface ViewController ()
 
@@ -25,7 +29,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    YZBaseDemo *demo = [[NSConditionDemo alloc] init];
+    YZBaseDemo *demo = [[SynchronizedDemo alloc] init];
+    
+//    [demo ticketTest];
+    
     
     [demo otherTest];
 }
