@@ -34,6 +34,9 @@ struct Student_IMPL {
 
 
 @end
+
+
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
 
@@ -56,6 +59,8 @@ int main(int argc, const char * argv[]) {
         
         NSLog(@"%zd-----%zd",class_getInstanceSize([NSObject class]),class_getInstanceSize([Student class]));
         
+        
+        //复杂的结构体
         
         
         
