@@ -106,8 +106,7 @@ struct __AtAutoreleasePool {
 };
 
 #define __OFFSETOFIVAR__(TYPE, MEMBER) ((long long) &((TYPE *)0)->MEMBER)
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_65_1l93lybd1m5gk250fs0jgr540000gn_T_main_a58caa_mi_0 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"this is block,a = %d,b = %d",27};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_65_1l93lybd1m5gk250fs0jgr540000gn_T_main_a58caa_mi_1 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"this is block,age = %d",22};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_65_1l93lybd1m5gk250fs0jgr540000gn_T_main_256927_mi_0 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"Block",5};
 
 
 
@@ -33803,21 +33802,17 @@ struct NSUUID_IMPL {
 struct __main_block_impl_0 {
   struct __block_impl impl;
   struct __main_block_desc_0* Desc;
-  int age;
-  __main_block_impl_0(void *fp, struct __main_block_desc_0 *desc, int _age, int flags=0) : age(_age) {
+  __main_block_impl_0(void *fp, struct __main_block_desc_0 *desc, int flags=0) {
     impl.isa = &_NSConcreteStackBlock;
     impl.Flags = flags;
     impl.FuncPtr = fp;
     Desc = desc;
   }
 };
-static void __main_block_func_0(struct __main_block_impl_0 *__cself, int a, int b) {
-  int age = __cself->age; // bound by copy
+static void __main_block_func_0(struct __main_block_impl_0 *__cself) {
 
-
-            NSLog((NSString *)&__NSConstantStringImpl__var_folders_65_1l93lybd1m5gk250fs0jgr540000gn_T_main_a58caa_mi_0,a,b);
-            NSLog((NSString *)&__NSConstantStringImpl__var_folders_65_1l93lybd1m5gk250fs0jgr540000gn_T_main_a58caa_mi_1,age);
-        }
+                   NSLog((NSString *)&__NSConstantStringImpl__var_folders_65_1l93lybd1m5gk250fs0jgr540000gn_T_main_256927_mi_0);
+               }
 
 static struct __main_block_desc_0 {
   size_t reserved;
@@ -33827,12 +33822,9 @@ int main(int argc, const char * argv[]) {
     /* @autoreleasepool */ { __AtAutoreleasePool __autoreleasepool; 
 
 
-        int age = 10;
-        void (*block)(int ,int ) = ((void (*)(int, int))&__main_block_impl_0((void *)__main_block_func_0, &__main_block_desc_0_DATA, age));
-
-
-        ((void (*)(__block_impl *, int, int))((__block_impl *)block)->FuncPtr)((__block_impl *)block, 3, 5);
-
+             void(*test)(void) = ((void (*)())&__main_block_impl_0((void *)__main_block_func_0, &__main_block_desc_0_DATA));
+        
+               ((void (*)(__block_impl *))((__block_impl *)test)->FuncPtr)((__block_impl *)test);
     }
     return 0;
 }

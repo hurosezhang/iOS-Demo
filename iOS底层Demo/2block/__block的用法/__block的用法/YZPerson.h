@@ -1,18 +1,17 @@
 //
 //  YZPerson.h
-//  消息转发
+//  __block的用法
 //
-//  Created by jonzhang on 2020/4/20.
+//  Created by jonzhang on 2020/7/15.
 //  Copyright © 2020 xinmei. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
-/// 消息发送
+
 @interface YZPerson : NSObject
 
-- (void)test ;
 @end
 
 NS_ASSUME_NONNULL_END

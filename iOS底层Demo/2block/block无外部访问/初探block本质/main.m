@@ -12,16 +12,10 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
 
 
-        int age = 10;
-        void (^block)(int ,int ) = ^(int a ,int b){
-          
-            NSLog(@"this is block,a = %d,b = %d",a,b);
-            NSLog(@"this is block,age = %d",age);
-        };
-        
-
-        block(3,5);
-
+        void(^test)(void) = ^{
+                   NSLog(@"Block");
+               };
+               test();
     }
     return 0;
 }

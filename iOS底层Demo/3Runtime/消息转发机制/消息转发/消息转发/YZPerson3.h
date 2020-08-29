@@ -1,17 +1,16 @@
 //
-//  YZPerson.h
+//  YZPerson3.h
 //  消息转发
 //
-//  Created by jonzhang on 2020/4/20.
+//  Created by jonzhang on 2020/7/20.
 //  Copyright © 2020 xinmei. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
-/// 消息发送
-@interface YZPerson : NSObject
 
+@interface YZPerson3 : NSObject
 - (void)test ;
 @end
 

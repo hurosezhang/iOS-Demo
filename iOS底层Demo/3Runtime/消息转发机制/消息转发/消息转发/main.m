@@ -8,14 +8,39 @@
 
 #import <Foundation/Foundation.h>
 #import "YZPerson.h"
+#import "YZPerson3.h"
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-        YZPerson *person = [[YZPerson alloc] init];
+
+//        funtion2();
         
-        [person test];
-
-
+        funtion3();
+        
     }
     return 0;
 }
+
+// 动态解析
+int funtion2 (){
+    
+    YZPerson *person = [[YZPerson alloc] init];
+    
+    [person test];
+    
+    return 1;
+
+}
+// 消息转发
+
+int funtion3 (){
+    
+    YZPerson3 *person = [[YZPerson3 alloc] init];
+    
+    [person test];
+    
+    return 1;
+
+}
+
